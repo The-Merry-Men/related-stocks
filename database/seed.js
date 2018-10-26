@@ -15,7 +15,7 @@ const dataGen = function(){
     let percentageApproved = faker.random.number(100); 
     let percentageChange = faker.random.number(100);
     
-    var companyQuery = 'INSERT INTO company_info (companyName, currentPrice, percentageApproved, percentageChange) VALUES(?, ?, ?, ?)'
+    var companyQuery = 'INSERT INTO company_info (companyName, currentPrice, percentageApproved, percentageChange) VALUES(?, ?, ?, ?)'; 
 
     connection.query(companyQuery, [companyName, currentPrice, percentageApproved, percentageChange], (err) => {
         if(err) {

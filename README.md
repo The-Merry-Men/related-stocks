@@ -1,9 +1,9 @@
 # Robinhood FEC 
 
-> Project description
+> Related Stocks Carousel
 
 ## Related Projects
-
+//change these to the repos of my teammates
   - https://github.com/teamName/repo
   - https://github.com/teamName/repo
   - https://github.com/teamName/repo

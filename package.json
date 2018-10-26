@@ -7,12 +7,13 @@
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {},
+  "scripts": {
+    "seed": "node ./database/seed.js"
+  },
   "dependencies": {
-    "bluebird": "^3.5.2",
     "faker": "^4.1.0",
     "mysql": "^2.16.0",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.5"
   },
   "devDependencies": {
     "eslint": "^5.7.0",
