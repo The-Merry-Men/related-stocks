@@ -9,9 +9,7 @@ class App extends React.Component {
         }
     }
     render() {
-        return <div>
-            <CompanyPage />
-        </div>
+        return (<div><CompanyPage /></div>)
     }
 }
 
