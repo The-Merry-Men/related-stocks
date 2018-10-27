@@ -3,7 +3,7 @@ let app = express();
 
 app.use(express.static(__dirname + '/../client/dist')); 
 
-app.get(`/companies/${companyName}`, function(req, res) {
+app.get('/companies/name', function(req, res) {
     //TODO: this route will get the information about a given company's
     //stock price, etc. from the DB
     //the things I was are:    id INT AUTO_INCREMENT primary key, 
