@@ -1,14 +1,14 @@
-import React from 'react'; 
+import React from 'react';
 import CompanyPage from './CompanyPage.jsx'
 
-class Carousel extends React.Component {
-  render() {
+function Carousel(props){
     return(
       <div className="carousel">
-        <CompanyPage />
+        <ul className="flex-container">
+            <CompanyPage companies={props.companies}/>
+        </ul>
       </div>
     ); 
-  }
 }
 
 

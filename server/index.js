@@ -16,6 +16,7 @@ app.get('/companies/:id', (req, res) => {
     if (error) {
       res.sendStatus(400);
     } else {
+      console.log(results);
       res.send(results);
     }
   });

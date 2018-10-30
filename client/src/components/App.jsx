@@ -9,20 +9,18 @@ class App extends React.Component {
     }
   }
 
-  // componentDidMount() {
-  //   fetch("http://localhost:3000/companies/:id")
-  //     .then(res => res.json())
-  //     .then(res => this.setState({
-  //       companies: res
-  //     }))
-  //     .then(() => console.log(this.state))
-  //     .catch(err => console.log(err))
-  // }
-
+  componentDidMount() {
+    fetch("http://localhost:3000/companies/:id")
+      .then(res => res.json())
+      .then(res => this.setState({
+        companies: res
+      }))
+      .then(() => console.log('STATE!!', this.state))
+      .catch(err => console.log(err))
+  }
+  
   render() {
-      return(
-          <Carousel companies={this.state.companies} />
-      ); 
+    return <Carousel companies={this.state.companies}/> 
   }
 }
 
