@@ -4,25 +4,19 @@ body {
     background: lightgrey;
 }
 
-.flex-container {
+.carousel-container {
     display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap; 
 }
 
 .flex-item {
-    padding: 10px;
-    border: 1px solid #0e0d0d;  
     display: flex; 
-    margin: 3px; 
-}
-
-
-.related-company {
-    display: flex; 
-    width: 160px; 
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-bottom: 25px;
-    padding-left: 25px;
+    padding: 10px; 
+    flex-direction: column;
+    border: 0.5px solid #0e0d0d;  
+    margin: 2px; 
+    width: 120px; 
 }
 
 .flex-item:hover {
@@ -31,16 +25,9 @@ body {
 }
 
 .company-name {
-    /* display: flex;  */
+    display: flex; 
     font-family: 'Oswald', sans-serif; 
     color: white; 
-    display: block;
-    /*margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: 500;
-    letter-spacing: 0.2px; */
 }
 
 .i {
@@ -52,79 +39,43 @@ body {
     display: flex; 
     font-family: 'Abel', sans-serif;
     color: white; 
-    /* display: block;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: 500;
-    letter-spacing: 0.2px; */
+
+}
+
+.approval-rating:hover {
+    color: white;
 }
 
 .stock-price {
     display: flex; 
     font-family: 'Oswald', sans-serif; 
     color: #f45531; 
-    /* margin-block-start: 1.3em;
-    font-size: 26px;
-    font-weight: 500;
-    letter-spacing: -0.14px;
-    line-height: 30px;
-     */
 }
 
 .price-fluctuation {
     display: flex; 
     font-family: 'Abel', sans-serif;
     color: #f45531; 
-    /* display: block;
-    margin-block-start: .3em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: 500;
-    letter-spacing: 0.2px; */
 } 
 
-
-/* 
-
-let companyPage = (
-    <div className="company-page">  
-        <div className="company-name">{newCompany.companyName}</div>
-        <div className="approval-rating">{newCompany.approvalRating}</div>
-        <div className="stock-price">{newCompany.stockPrice}</div>
-        <div className="price-fluctuation">{newCompany.priceFluctuation}</div>
-    </div>
-  )
-
-
-  CSS Notes for Robinhood
-
-Red color: #f45531
-Green color: #21ce99
-Black background color: background: #1b1b1d;
-White color: #fff
-Dark black (for when screen is black): border-color: #0e0d0d
-
-“People Also Bought" — also applies to font and sizing of
-Dollar amount of each stock
-h2 { font-size: 26px;
-
-font-weight: 500;
-letter-spacing: -0.14px;
-line-height: 30px; } … don’t do pixels … do something more responsive than this
-Name of company on top of component box and % and % ^ and down
-p {
-
-letter-spacing: 0.2px;
+.tooltip {
+    position: relative;
+    display: flex;
 }
-Body font: font-family: “DIN Pro”, -apple-system, BlinkMacSystemFont, sans-serif; (styling below)
-h4, body, h4.copy-lg, h4.section-description, h4.regular, body.copy-lg, body.section-description, body.regular {
-font-size: 13px;
-font-weight: 400;
-letter-spacing: 0.25px;
-line-height: 19px;
-margin: 0;
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 8.5px; 
 }
-Icons I need:
--price tag
--arrrows for when someone is moving the carousel
--arrow only there when you CAN actually scroll in that direction */ */
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

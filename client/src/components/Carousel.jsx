@@ -3,11 +3,9 @@ import CompanyPage from './CompanyPage.jsx'
 
 function Carousel(props){
     return(
-      <div className="carousel">
-        <ul className="flex-container">
+        <ul className="carousel-container">
             <CompanyPage companies={props.companies}/>
         </ul>
-      </div>
     ); 
 }
 

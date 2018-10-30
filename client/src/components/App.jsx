@@ -15,7 +15,7 @@ class App extends React.Component {
       .then(res => this.setState({
         companies: res
       }))
-      .then(() => console.log('STATE!!', this.state))
+      .then(() => () => {this.state})
       .catch(err => console.log(err))
   }
   
