@@ -13,9 +13,9 @@ function CompanyPage(obj) {
     let companyPage = (
     <div className="company-page">  
         <div className="company-name">{newCompany.companyName}</div>
-        <div className="approval-rating">{newCompany.approvalRating}</div>
-        <div className="stock-price">{newCompany.stockPrice}</div>
-        <div className="price-fluctuation">{newCompany.priceFluctuation}</div>
+        <div className="approval-rating"><i className="fa fa-tag"></i>{newCompany.approvalRating}%</div>
+        <div className="stock-price">${newCompany.stockPrice}.99</div>
+        <div className="price-fluctuation">{newCompany.priceFluctuation}%</div>
     </div>
   )
 
