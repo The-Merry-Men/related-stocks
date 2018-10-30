@@ -4,10 +4,24 @@ import Carousel from './Carousel.jsx'
 class App extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      companies: []
+    }
   }
+
+  // componentDidMount() {
+  //   fetch("http://localhost:3000/companies/:id")
+  //     .then(res => res.json())
+  //     .then(res => this.setState({
+  //       companies: res
+  //     }))
+  //     .then(() => console.log(this.state))
+  //     .catch(err => console.log(err))
+  // }
+
   render() {
       return(
-          <Carousel />
+          <Carousel companies={this.state.companies} />
       ); 
   }
 }
