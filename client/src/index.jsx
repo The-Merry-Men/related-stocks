@@ -1,16 +1,5 @@
 import React from 'react'; 
 import ReactDOM from 'react-dom'; 
-import CompanyPage from './components/CompanyPage.jsx'
-
-class App extends React.Component {
-    constructor(props) {
-        super(props); 
-        this.state = {
-        }
-    }
-    render() {
-        return (<div><CompanyPage /></div>)
-    }
-}
+import App from './components/App.jsx'
 
 ReactDOM.render(<App />, document.getElementById('app')); 
