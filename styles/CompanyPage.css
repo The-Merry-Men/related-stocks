@@ -1,13 +1,7 @@
-@font-face {
-    font-family: 'DIN Pro';
-    font-style: normal;
-    src: url(https://d2ue93q3u507c2.cloudfront.net/assets/generated_assets/e0be9bd5e372b2c379893b776e7b2b96.otf) format("opentype");
-  }
-
 .body {
     display: flex; 
-    font-family: 'DIN Pro';
-    background-color: black; 
+    font-family: 'Abel', sans-serif;
+    background: black; 
 }
 
 .carousel-container {
@@ -16,32 +10,15 @@
     flex-wrap: nowrap; 
 }
 
-.backArrow {
-    display: flex; 
-    align-self: center; 
-    padding: 5px; 
-}
-
-.nextArrow {
-    display: flex; 
-    align-self: center; 
-    padding: 5px; 
-}
-
-
-.main-container {
+.title {
     color: white; 
     font-weight: bold; 
-    font-size: 14px;
-    font-family: 'Abel', sans-serif; 
-    background-color: grey; 
 }
 
 .related-company {
     display: flex; 
     flex-direction:row; 
 }
-
 
 .flex-item {
     display: flex; 
@@ -52,7 +29,6 @@
     width: 120px; 
 }
 
-
 .flex-item:hover {
     display: flex; 
     background: #0e0d0d; 
@@ -60,16 +36,16 @@
 
 .company-name {
     display: flex; 
-    font-family: 'DIN Pro'; 
+    font-family: 'Oswald', sans-serif; 
     color: white; 
 }
 
 .fa-angle-left{
-    color: black; 
+    color: white; 
 }
 
 .fa-angle-right{
-    color: black; 
+    color: white; 
 }
 
 .fa-angle-left:hover{
@@ -87,7 +63,7 @@
 
 .approval-rating {
     display: flex; 
-    font-family: 'DIN Pro';
+    font-family: 'Abel', sans-serif;
     color: white; 
 
 }
@@ -100,21 +76,18 @@
 
 .stock-price {
     display: flex; 
-    font-family: 'DIN Pro'; 
+    font-family: 'Oswald', sans-serif; 
     /* color: #f45531;  */
     color: #21ce99
 }
 
-
 .price-fluctuation {
     align-items: baseline; 
     display: flex; 
-    font-family: 'DIN Pro';
+    font-family: 'Abel', sans-serif;
     /* color: #f45531;  */
     color: #21ce99; 
 } 
-
-
 
 .tooltip {
     position: relative;
@@ -138,3 +111,5 @@
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+
