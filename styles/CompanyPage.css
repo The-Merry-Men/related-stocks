@@ -1,0 +1,115 @@
+.body {
+    display: flex; 
+    font-family: 'Abel', sans-serif;
+    background: black; 
+}
+
+.carousel-container {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap; 
+}
+
+.title {
+    color: white; 
+    font-weight: bold; 
+}
+
+.related-company {
+    display: flex; 
+    flex-direction:row; 
+}
+
+.flex-item {
+    display: flex; 
+    padding: 10px; 
+    flex-direction: column;
+    border: 0.5px solid #0e0d0d;  
+    margin: 2px; 
+    width: 120px; 
+}
+
+.flex-item:hover {
+    display: flex; 
+    background: #0e0d0d; 
+}
+
+.company-name {
+    display: flex; 
+    font-family: 'Oswald', sans-serif; 
+    color: white; 
+}
+
+.fa-angle-left{
+    color: white; 
+}
+
+.fa-angle-right{
+    color: white; 
+}
+
+.fa-angle-left:hover{
+    color: #21ce99; 
+}
+
+.fa-angle-right:hover{
+    color: #21ce99; 
+}
+
+.i {
+    /* display: flex;  */
+    color: white; 
+}
+
+.approval-rating {
+    display: flex; 
+    font-family: 'Abel', sans-serif;
+    color: white; 
+
+}
+
+.approval-rating:hover {
+    color: white;
+}
+
+
+
+.stock-price {
+    display: flex; 
+    font-family: 'Oswald', sans-serif; 
+    /* color: #f45531;  */
+    color: #21ce99
+}
+
+.price-fluctuation {
+    align-items: baseline; 
+    display: flex; 
+    font-family: 'Abel', sans-serif;
+    /* color: #f45531;  */
+    color: #21ce99; 
+} 
+
+.tooltip {
+    position: relative;
+    display: flex;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 8.5px; 
+}
+
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+

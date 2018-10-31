@@ -1,21 +1,29 @@
 const express = require('express'); 
-let app = express(); 
+const mysql = require('mysql');
 
-app.use(express.static(__dirname + '/../client/dist')); 
+const app = express();
 
-app.get(`/companies/${companyName}`, function(req, res) {
-    //TODO: this route will get the information about a given company's
-    //stock price, etc. from the DB
-    //the things I was are:    id INT AUTO_INCREMENT primary key, 
-        // companyName,
-        // currentPrice, 
-        // percentageApproved,
-        // percentageChange
-    //QUESTION: can I actually format a route like this..? 
-}); 
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  database: 'fec_robinhood',
+});
 
-let port = 3005; 
+app.use(express.static(`${__dirname}/../client/dist`));
 
-app.listen(port, function() {
-    console.log(`listening on port ${port}`); 
-}); 
+app.get('/companies/:id', (req, res) => {
+  connection.query('SELECT * from company_info LIMIT 12', (error, results) => {
+    if (error) {
+      res.sendStatus(400);
+    } else {
+      console.log(results);
+      res.send(results);
+    }
+  });
+});
+
+const port = 3000;
+
+app.listen(port, () => {
+  console.log(`listening on port ${port}`);
+});
