@@ -7,23 +7,32 @@
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {},
+  "scripts": {
+    "seed": "node ./database/seed.js",
+    "react-dev": "webpack -d --watch"
+  },
   "dependencies": {
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.4",
     "faker": "^4.1.0",
     "mysql": "^2.16.0",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.5",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
-    "eslint": "^5.7.0",
+    "components": "^0.1.0",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.8.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0",
+    "styled": "^1.0.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
   }
