@@ -8,4 +8,4 @@ const RightArrow = (props) => {
   );
 }
 
-export default RightArrow; 
+export default RightArrow;
