@@ -30,13 +30,14 @@
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    position: absolute;
+    /* position: absolute; */
     top: 100;
     box-sizing: inherit;
     text-align: left;
     -webkit-box-direction: normal;
     font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 400;
+    font-size: 13px;
     letter-spacing: 0.25px;
     line-height: 19px;
 }
@@ -53,11 +54,11 @@
     margin-right: 12px;
     overflow: hidden;
     padding: 22px 23px;
-    transition: border-color 250ms, box-shadow 250ms, -webkit-box-shadow 250ms;
+    /* transition: border-color 250ms, box-shadow 250ms, -webkit-box-shadow 250ms; */
     width: 160.5px;
     border: 1px solid;
     border-radius: 2px;
-    color: black;
+    /* color: black; */
     text-decoration: inherit;
     box-sizing: inherit;
     text-align: left;
@@ -112,7 +113,7 @@
     font-weight: 500;
     letter-spacing: -0.14px;
     line-height: 30px;
-    box-sizing: inherit;
+    /* box-sizing: inherit; */
     display: block;
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
@@ -146,7 +147,7 @@
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
-    background-color: black;
+    background-color: white;
     color: black;
     text-align: center;
     border-radius: 6px;

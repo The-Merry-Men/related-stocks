@@ -5,7 +5,7 @@ import LeftArrow from '../components/LeftArrow.jsx'
 function CompanyPage(props) {
     let newCompany = props.companies.map((company) =>
         <div className="stock-card">
-            <div className="company-name"><p>{company.companyName}</p></div>
+            <div className="company-name">{company.companyName}</div>
             <div className="approval-rating">
                 <i className="fa fa-tag fa-rotate-90 fa-xl"></i>
                 <div className="tooltip">{company.percentageApproved}%

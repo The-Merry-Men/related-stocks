@@ -41,7 +41,8 @@ class App extends React.Component {
   
   render() {
     return (
-      <div className="carousel">
+      <div className="carousel-container">
+       <h2>People Also Bought</h2>
           <Carousel companies={this.state.companies} moveLeft={this.moveLeft.bind(this)} moveRight={this.moveRight.bind(this)}
                     center={this.state.center} left={this.state.left} right={this.state.right} />
      </div>
