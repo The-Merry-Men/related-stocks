@@ -44,7 +44,7 @@ class App extends React.Component {
       <div className="carousel">
           <Carousel companies={this.state.companies} moveLeft={this.moveLeft.bind(this)} moveRight={this.moveRight.bind(this)}
                     center={this.state.center} left={this.state.left} right={this.state.right} />
-      </div>
+     </div>
     )
   }
 }
