@@ -18,6 +18,15 @@
     box-sizing: inherit;
 }
 
+.wrapper {
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    position: relative; 
+    width: 900.66px; 
+    height: 196px; 
+    display: flex; 
+}
+
 .carousel {
     display: flex; 
     flex-direction: row;
@@ -25,6 +34,7 @@
 }
 
 .related-company-row {
+    transform: translateX(0%);
     margin: 0;
     padding: 6px;
     display: flex;

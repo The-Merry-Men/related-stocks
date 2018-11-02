@@ -19,10 +19,12 @@ function CompanyPage(props) {
 
 
     return(
-        <div className="related-company-row">
-            <LeftArrow moveLeft={props.moveLeft} />
-                {newCompany}
-            <RightArrow moveRight={props.moveRight}/>
+        <div className="wrapper">
+            <div className="related-company-row">
+                <LeftArrow />
+                    {newCompany}
+                <RightArrow />
+            </div>
         </div>
     )
 
