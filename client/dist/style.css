@@ -12,7 +12,6 @@
     -webkit-box-direction: normal;
     font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 13px;
-    font-weight: 400;
     letter-spacing: 0.25px;
     line-height: 19px;
     box-sizing: inherit;
@@ -20,10 +19,9 @@
 
 .wrapper {
     overflow-x: hidden; 
-    overflow-y: hidden; 
-    position: relative; 
-    width: 900.66px; 
-    height: 196px; 
+    position: relative;
+    width: 720px; 
+    height: 3000px; 
     display: flex; 
 }
 
@@ -35,18 +33,17 @@
 
 .related-company-row {
     transform: translateX(0%);
-    margin: 0;
+    /* margin: 0; */
     padding: 6px;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    /* position: absolute; */
+    position: absolute;
     top: 100;
     box-sizing: inherit;
     text-align: left;
     -webkit-box-direction: normal;
     font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 400;
     font-size: 13px;
     letter-spacing: 0.25px;
     line-height: 19px;
@@ -58,37 +55,31 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
-    height: 184px;
+    height: 138px;
     -webkit-box-pack: justify;
     justify-content: space-between;
     margin-right: 12px;
     overflow: hidden;
-    padding: 22px 23px;
-    /* transition: border-color 250ms, box-shadow 250ms, -webkit-box-shadow 250ms; */
-    width: 160.5px;
+    padding: 20px 24px;
+    width: 112.5px;
     border: 1px solid;
     border-radius: 2px;
-    /* color: black; */
     text-decoration: inherit;
     box-sizing: inherit;
     text-align: left;
     font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 13px;
-    font-weight: 400;
     letter-spacing: 0.25px;
     line-height: 19px;
 }
 
-.company-name {
+.company-name { 
+    cursor: pointer; 
     color: black; 
-    margin: 0;
     max-height: 6ex;
-    overflow: hidden;
-    font-weight: 500;
     letter-spacing: 0.2px;
     box-sizing: inherit;
     display: block;
-    margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
@@ -97,7 +88,8 @@
     font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 13px;
     line-height: 19px;
-    box-sizing: inherit;
+    margin-bottom: 5px;
+
 }
 
 .approval-rating {
@@ -106,10 +98,8 @@
     align-items: center;
     display: flex;
     font-size: 13px;
-    font-weight: 400;
     letter-spacing: 0.25px;
     line-height: 19px;
-    margin: 0;
     box-sizing: inherit;
     -webkit-box-direction: normal;
     text-align: left;
@@ -118,14 +108,13 @@
 }
 
 .stock-price {
-    margin: 0 0 4px;
+    margin-left: 6px; 
     font-size: 26px;
-    font-weight: 500;
     letter-spacing: -0.14px;
     line-height: 30px;
-    /* box-sizing: inherit; */
     display: block;
-    margin-block-start: 0.83em;
+    margin: 0 0 4px;
+    margin-block-start: 1.83em;
     margin-block-end: 0.83em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
@@ -152,6 +141,7 @@
 .tooltip {
     position: relative;
     display: flex;
+    margin-left: 3px; 
 }
 
 .tooltip .tooltiptext {
@@ -168,9 +158,9 @@
 }
 
 
-.tooltip:hover .tooltiptext {
+/* .tooltip:hover .tooltiptext {
     visibility: visible;
-}
+} */
 
 .fa-angle-left{
     color: black; 
@@ -189,6 +179,8 @@
 }
 
 .i {
+    margin-right: 4px; 
+    line-height: 100%;
     display: flex; 
     color: black
 }
