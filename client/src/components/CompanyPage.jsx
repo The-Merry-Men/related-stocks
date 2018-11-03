@@ -11,7 +11,7 @@ function CompanyPage(props) {
                     </div>
                 </div>
             </div>
-            <div className="stock-price">${company.currentPrice}.99
+            <div className="stock-price">${company.currentPrice.toFixed(2)}
              <div className="price-fluctuation">+{company.percentageChange/100}%</div>
             </div>
         </div>

@@ -9,19 +9,18 @@ const connection = mysql.createConnection({
 });
 
 function dataGen() {
-  const companyName = faker.company.companyName();
-  const currentPrice = faker.random.number(100);
+  const companyName = faker.company.companyName({ minimum: 5, maximum: 20 });
+  const currentPrice = () => (Math.random() * 150).toFixed(2); 
   const percentageApproved = faker.random.number(100);
   const percentageChange = faker.random.number(100);
 
   const companyQuery = 'INSERT INTO company_info (companyName, currentPrice, percentageApproved, percentageChange) VALUES(?, ?, ?, ?)';
 
-  connection.query(companyQuery, [companyName, currentPrice, percentageApproved, percentageChange],
+  connection.query(companyQuery, [companyName, currentPrice(), percentageApproved, percentageChange],
     (err) => {
       if (err) {
         return console.log(err);
       }
-      return console.log('SUCCESS');
     });
 }
 

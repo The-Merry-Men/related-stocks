@@ -52,7 +52,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="carousel-container">
-       <h2>People Also Bought</h2>
+       <div className="title">People Also Bought</div>
           <Carousel companies={this.state.companies} moveLeft={this.moveLeft.bind(this)} 
           moveRight={this.moveRight.bind(this)} count={this.state.count}/>
      </div>
