@@ -7,20 +7,36 @@ class App extends React.Component {
     super(props);
     this.state = {
       companies: [],
+      count: 0, 
     }
   }
 
-  // moveLeft(){
-  //   this.setState({
-  //     companies: this.state.companies === this.state.right ? this.state.center : this.state.left 
-  //   })
-  // }
 
-  // moveRight(){
-  //   this.setState({
-  //     companies: this.state.companies === this.state.left ? this.state.center : this.state.right
-  //   })
-  // }
+  moveLeft(){  
+    if(this.state.count === 1) { 
+      document.querySelector('.leftArrow').style.visibility = 'hidden'; 
+      document.querySelector('.related-company-row').style.transform = 'translateX(0)'; 
+      this.state.count--
+    }
+    else if(this.state.count === 2) {
+      document.querySelector('.rightArrow').style.visibility = 'visible'; 
+      document.querySelector('.related-company-row').style.transform = 'translateX(-33.33%)'; 
+      this.state.count--
+    }
+  }
+
+  moveRight(){
+    if(this.state.count === 0) {
+      document.querySelector('.leftArrow').style.visibility = 'visible'; 
+      document.querySelector('.related-company-row').style.transform = 'translateX(-33.33%)'; 
+      this.state.count++
+    } 
+    else if(this.state.count===1) {
+      document.querySelector('.rightArrow').style.visibility = 'hidden'; 
+      document.querySelector('.related-company-row').style.transform = 'translateX(-66.3%)'; 
+      this.state.count++
+    }
+  }
 
 
   componentDidMount() {
@@ -37,7 +53,8 @@ class App extends React.Component {
     return (
       <div className="carousel-container">
        <h2>People Also Bought</h2>
-          <Carousel companies={this.state.companies} />
+          <Carousel companies={this.state.companies} moveLeft={this.moveLeft.bind(this)} 
+          moveRight={this.moveRight.bind(this)} count={this.state.count}/>
      </div>
     )
   }

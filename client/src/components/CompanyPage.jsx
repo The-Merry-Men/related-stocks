@@ -1,6 +1,4 @@
 import React from 'react'; 
-import RightArrow from '../components/RightArrow.jsx'
-import LeftArrow from '../components/LeftArrow.jsx'
 
 function CompanyPage(props) {
     let newCompany = props.companies.map((company) =>
@@ -23,9 +21,7 @@ function CompanyPage(props) {
     return(
         <div className="wrapper">
             <div className="related-company-row">
-                <LeftArrow />
                     {newCompany}
-                <RightArrow />
             </div>
         </div>
     )
