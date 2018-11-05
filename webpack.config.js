@@ -22,8 +22,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' 
+        test: /\.css/,
+        loader: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+        ],
       },
       {
         test: /\.jsx?/,

@@ -1,5 +1,6 @@
 import React from 'react'; 
 import Carousel from './Carousel.jsx'
+import style from '../styles/app.css'
 
 
 class App extends React.Component {
@@ -15,12 +16,12 @@ class App extends React.Component {
   moveLeft(){  
     if(this.state.count === 1) { 
       document.querySelector('.leftArrow').style.visibility = 'hidden'; 
-      document.querySelector('.related-company-row').style.transform = 'translateX(0)'; 
+      document.querySelector('.relatedCompanyRow').style.transform = 'translateX(0)'; 
       this.state.count--
     }
     else if(this.state.count === 2) {
       document.querySelector('.rightArrow').style.visibility = 'visible'; 
-      document.querySelector('.related-company-row').style.transform = 'translateX(-33.33%)'; 
+      document.querySelector('.relatedCompanyRow').style.transform = 'translateX(-33.33%)'; 
       this.state.count--
     }
   }
@@ -28,12 +29,12 @@ class App extends React.Component {
   moveRight(){
     if(this.state.count === 0) {
       document.querySelector('.leftArrow').style.visibility = 'visible'; 
-      document.querySelector('.related-company-row').style.transform = 'translateX(-33.33%)'; 
+      document.querySelector('.relatedCompanyRow').style.transform = 'translateX(-33.33%)'; 
       this.state.count++
     } 
     else if(this.state.count===1) {
       document.querySelector('.rightArrow').style.visibility = 'hidden'; 
-      document.querySelector('.related-company-row').style.transform = 'translateX(-66.3%)'; 
+      document.querySelector('.relatedCompanyRow').style.transform = 'translateX(-66.3%)'; 
       this.state.count++
     }
   }
@@ -51,8 +52,8 @@ class App extends React.Component {
   
   render() {
     return (
-      <div className="carousel-container">
-       <div className="title">People Also Bought</div>
+      <div className={style.wrapper}>
+       <div className={style.title}>People Also Bought</div>
           <Carousel companies={this.state.companies} moveLeft={this.moveLeft.bind(this)} 
           moveRight={this.moveRight.bind(this)} count={this.state.count}/>
      </div>
