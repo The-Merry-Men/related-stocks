@@ -23,7 +23,7 @@ app.get('/companies/:id', (req, res) => {
       console.log(error)
       res.sendStatus(400);
     } else {
-      console.log('tesotiejs');
+      console.log(results);
       res.send(results);
     }
   });
@@ -31,7 +31,7 @@ app.get('/companies/:id', (req, res) => {
 
  
 
-const port = 3009;
+const port = 3000;
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
