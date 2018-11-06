@@ -13,41 +13,12 @@
     src: url(https://d2ue93q3u507c2.cloudfront.net/assets/generated_assets/48a3635ce1e76c0122a143b076f51adf.otf) format("opentype");
   }
 
-.title {
-    font-family: "DIN Pro";
-    padding-left: 36px; 
-    font-size: 26px;
-    font-style: bold; 
-    font-weight: 500; 
-    letter-spacing: -0.14px; 
-    line-height: 30px; 
-    margin-block-start: 0.83em; 
-    margin-block-end: 0.83em; 
-}
-
-
-.wrapper {
-    overflow-x: hidden; 
-    position: absolute;
-    width: 695px; 
-    height: 230px; 
-    display: flex; 
-    margin-left: 8px; 
-    left: 30px; 
-}
-
-.carousel {
-    display: flex; 
-}
-
-.relatedCompanyRow {
+.companyPageRow{
     margin-top: -2px; 
-    overflow-x: hidden; 
     transition-duration: .8s;
     transform: translateX(0%);
     padding: 6px;
     display: flex;
-    position: absolute;
 }
 
 .stockCard {
@@ -119,7 +90,7 @@
     z-index: 5;
     font-size: 10px; 
     display: inline;
-    position:absolute;
+    /* position:absolute; */
     left: -32px;
     right: 0;
     text-align: center;
@@ -128,30 +99,3 @@
 .approvalRating:hover .tooltiptext{
     visibility: visible;
 }
-
-.leftArrow {
-    margin-top: 60px; 
-    margin-left: 2px; 
-    display: flex;
-    padding: 5px; 
-    z-index: 100; 
-    visibility: hidden;  
-}
-
-.leftArrow:hover{
-    color: #21ce99; 
-    align-self: right; 
-} 
-
-.rightArrow {
-    visibility: visible;
-    margin-top: 60px;
-    display: flex; 
-    padding: 5px; 
-    margin-left: 700px; 
-}
-
-.rightArrow:hover{
-    color: #21ce99; 
-    align-self: right; 
-} 

@@ -7,8 +7,6 @@ import style from '../styles/carousel.css'
 function Carousel(props){
     return(
         <div className={style.carousel}>
-            <LeftArrow moveLeft={props.moveLeft} />
-            <RightArrow moveRight={props.moveRight} />
             <CompanyPage companies={props.companies} />
         </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react'; 
-import style from '../styles/companyPage.css'
+import style from '../styles/companyPage.css'; 
 
 function CompanyPage(props) {
     let newCompany = props.companies.map((company) =>
@@ -20,10 +20,8 @@ function CompanyPage(props) {
 
 
     return(
-        <div className={style.wrapper}>
-            <div className={style.relatedCompanyRow}>
-                    {newCompany}
-            </div>
+        <div className={style.companyPageRow}>
+                {newCompany}
         </div>
     )
 

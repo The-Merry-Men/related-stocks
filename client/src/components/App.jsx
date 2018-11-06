@@ -1,7 +1,9 @@
 import React from 'react'; 
-import Carousel from './Carousel.jsx'
-import style from '../styles/app.css'
+import Carousel from './Carousel.jsx';
+import style from '../styles/app.css';
 
+import LeftArrow from '../components/LeftArrow.jsx';
+import RightArrow from '../components/RightArrow.jsx';
 
 class App extends React.Component {
   constructor(props){
@@ -12,33 +14,31 @@ class App extends React.Component {
     }
   }
 
-
   moveLeft(){  
     if(this.state.count === 1) { 
-      document.querySelector('.leftArrow').style.visibility = 'hidden'; 
-      document.querySelector('.relatedCompanyRow').style.transform = 'translateX(0)'; 
+      document.querySelector('._16zWWldI44UY5q0wjhM1EW').style.visibility = 'hidden'; 
+      document.querySelector('.mtQN7PP0gq3J4UJulSUSq').style.transform = 'translateX(0)'; 
       this.state.count--
     }
     else if(this.state.count === 2) {
-      document.querySelector('.rightArrow').style.visibility = 'visible'; 
-      document.querySelector('.relatedCompanyRow').style.transform = 'translateX(-33.33%)'; 
+      document.querySelector('._3EX-T77cfR8-wwRXZ0Oa5e').style.visibility = 'visible'; 
+      document.querySelector('.mtQN7PP0gq3J4UJulSUSq').style.transform = 'translateX(-33.33%)'; 
       this.state.count--
     }
   }
 
   moveRight(){
     if(this.state.count === 0) {
-      document.querySelector('.leftArrow').style.visibility = 'visible'; 
-      document.querySelector('.relatedCompanyRow').style.transform = 'translateX(-33.33%)'; 
+      document.querySelector('._16zWWldI44UY5q0wjhM1EW').style.visibility = 'visible'; 
+      document.querySelector('.mtQN7PP0gq3J4UJulSUSq').style.transform = 'translateX(-33.33%)'; 
       this.state.count++
     } 
     else if(this.state.count===1) {
-      document.querySelector('.rightArrow').style.visibility = 'hidden'; 
-      document.querySelector('.relatedCompanyRow').style.transform = 'translateX(-66.3%)'; 
+      document.querySelector('._3EX-T77cfR8-wwRXZ0Oa5e').style.visibility = 'hidden'; 
+      document.querySelector('.mtQN7PP0gq3J4UJulSUSq').style.transform = 'translateX(-66.3%)'; 
       this.state.count++
     }
   }
-
 
   componentDidMount() {
     fetch("http://localhost:3000/companies/:id")
@@ -52,10 +52,10 @@ class App extends React.Component {
   
   render() {
     return (
-      <div className={style.wrapper}>
-       <div className={style.title}>People Also Bought</div>
-          <Carousel companies={this.state.companies} moveLeft={this.moveLeft.bind(this)} 
-          moveRight={this.moveRight.bind(this)} count={this.state.count}/>
+      <div className={style.app}>
+        <LeftArrow moveLeft={this.moveLeft.bind(this)} />
+        <Carousel companies={this.state.companies} count={this.state.count}/>
+        <RightArrow moveRight={this.moveRight.bind(this)}/>
      </div>
     )
   }
