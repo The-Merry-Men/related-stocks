@@ -23,7 +23,7 @@ app.get('/companies/:id', (req, res) => {
       console.log(error)
       res.sendStatus(400);
     } else {
-      console.log('tesotiejs');
+      console.log(results);
       res.send(results);
     }
   });
