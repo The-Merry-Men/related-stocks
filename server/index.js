@@ -11,6 +11,7 @@ const connection = mysql.createConnection({
 
 app.use(express.static(`${__dirname}/../client/dist`));
 
+
 app.get('/companies/:id', (req, res) => {
   connection.query('SELECT * from company_info LIMIT 12', (error, results) => {
     if (error) {
