@@ -35,13 +35,15 @@ class App extends React.Component {
     } 
     else if(this.state.count===1) {
       document.querySelector('._3EX-T77cfR8-wwRXZ0Oa5e').style.visibility = 'hidden'; 
-      document.querySelector('.mtQN7PP0gq3J4UJulSUSq').style.transform = 'translateX(-66.3%)'; 
+      document.querySelector('.mtQN7PP0gq3J4UJulSUSq').style.transform = 'translateX(-66.66%)'; 
       this.state.count++
     }
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/companies/:id")
+    // this.handleGetRequest.bind(this);
+    var id = 2; 
+    fetch(`http://localhost:3000/companies/${id}`)
       .then(res => res.json())
       .then(res => this.setState({
         companies: res
@@ -50,6 +52,9 @@ class App extends React.Component {
       .catch(err => console.log(err))
   }
   
+  // handleGetRequest(id = req.params.id) {
+  // }
+
   render() {
     return (
       <div className={style.app}>

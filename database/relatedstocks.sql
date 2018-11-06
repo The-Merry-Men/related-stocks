@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS company_info;
 
 CREATE TABLE company_info (
     id int NOT NULL AUTO_INCREMENT,
-    companyName VARCHAR(16), 
+    companyName VARCHAR(20), 
     currentPrice DECIMAL(5, 2), 
     percentageApproved INT, 
     percentageChange INT,
@@ -18,7 +18,6 @@ CREATE TABLE company_info (
 DROP TABLE IF EXISTS user_purchase; 
 
 CREATE TABLE user_purchase (
-    userID INT, 
-    company_id INT, 
-    FOREIGN KEY(company_id) REFERENCES company_info(id)    
+    userID int, 
+    company_id int 
 ); 

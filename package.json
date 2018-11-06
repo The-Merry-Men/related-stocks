@@ -12,7 +12,7 @@
     "react-dev": "webpack -d --watch",
     "test": "jest",
     "test:debug": "jest --debug",
-    "start": "node server/index.js"
+    "start": "nodemon server/index.js"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/client/src/components/__tests__/setupTests.js",
