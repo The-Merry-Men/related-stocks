@@ -1,0 +1,29 @@
+
+@font-face {
+    font-family: 'DIN Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://d2ue93q3u507c2.cloudfront.net/assets/generated_assets/86fda98796bb4100ba905535a77723bd.otf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: 'DIN Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://d2ue93q3u507c2.cloudfront.net/assets/generated_assets/48a3635ce1e76c0122a143b076f51adf.otf) format("opentype");
+  }
+
+.title {
+    display: block;
+    font-size: 26px;
+    font-family: "DIN Pro";
+    font-style: bold; 
+    font-weight: 500; 
+    letter-spacing: -0.14px; 
+}
+
+.app {
+    display: flex; 
+    overflow-x: hidden; 
+    width: 100%; 
+}

@@ -1,0 +1,24 @@
+
+@font-face {
+    font-family: 'DIN Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://d2ue93q3u507c2.cloudfront.net/assets/generated_assets/86fda98796bb4100ba905535a77723bd.otf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: 'DIN Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://d2ue93q3u507c2.cloudfront.net/assets/generated_assets/48a3635ce1e76c0122a143b076f51adf.otf) format("opentype");
+  }
+
+.leftArrow {
+    margin-top: 60px; 
+    visibility: hidden;  
+}
+
+.leftArrow:hover{
+    color: #21ce99; 
+    align-self: right; 
+} 

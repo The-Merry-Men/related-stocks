@@ -1,15 +1,12 @@
 import React from 'react';
-
-//need to add functionality to the 'onClick' function here 
+import style from '../styles/leftArrow.css'
 
 const LeftArrow = (props) => {
   return (
-    <div className="backArrow" onClick={props.moveLeft}>
-      <i className="fa fa-angle-left fa-3x" aria-hidden="true"></i>
+    <div className={style.leftArrow}>
+      <i className="fa fa-angle-left fa-3x" aria-hidden="false" onClick={props.moveLeft}></i>
     </div>
   );
 }
-
-
 
 export default LeftArrow; 

@@ -1,33 +1,30 @@
 import React from 'react'; 
-import RightArrow from '../components/RightArrow.jsx'
-import LeftArrow from '../components/LeftArrow.jsx'
+import style from '../styles/companyPage.css'; 
 
 function CompanyPage(props) {
     let newCompany = props.companies.map((company) =>
-        <div className="flex-item">
-            <li className="company-name">{company.companyName}</li>
-            <li className="approval-rating">
-                <i className="fa fa-tag fa-xs"></i>
-                <div className="tooltip">{company.percentageApproved}%
-                    <span className="tooltiptext">{company.percentageApproved}% of analysts agree {company.companyName} is a buy.</span>
+        <div className={style.stockCard}>
+                <div className={style.companyName}>{company.companyName}
+                <div className={style.approvalRating}>
+                    <i className="fa fa-tag fa-rotate-90 fa-xl"></i>
+                    <div className={style.tooltip}> {company.percentageApproved}%
+                        <span className={style.tooltiptext}>{company.percentageApproved}% of analysts agree {company.companyName} is a buy.</span>
+                    </div>
                 </div>
-            </li>
-            <li className="stock-price">${company.currentPrice}.99</li>
-            <li className="price-fluctuation">+{company.percentageChange/100}%</li>
+            </div>
+            <div className={style.stockPrice}>${company.currentPrice.toFixed(2)}
+             <div className={style.priceFluctuation}>+{company.percentageChange/100}%</div>
+            </div>
         </div>
     ); 
 
 
-  
     return(
-        <div className="main-container"><h1>People Also Bought</h1>
-            <div className="related-company">
-                <LeftArrow moveLeft={props.moveLeft}/>
-                    {newCompany}
-                <RightArrow moveRight={props.moveRight}/>
-            </div>
+        <div className={style.companyPageRow}>
+                {newCompany}
         </div>
     )
+
 }
 
 export default CompanyPage;

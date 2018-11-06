@@ -1,0 +1,27 @@
+
+@font-face {
+    font-family: 'DIN Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://d2ue93q3u507c2.cloudfront.net/assets/generated_assets/86fda98796bb4100ba905535a77723bd.otf) format("opentype");
+  }
+  
+  @font-face {
+    font-family: 'DIN Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://d2ue93q3u507c2.cloudfront.net/assets/generated_assets/48a3635ce1e76c0122a143b076f51adf.otf) format("opentype");
+  }
+
+
+.rightArrow {
+    visibility: visible;
+    margin-top: 60px;
+    margin-left: 720px;   
+    position: absolute; 
+}
+
+.rightArrow:hover{
+    color: #21ce99; 
+    align-self: right; 
+} 

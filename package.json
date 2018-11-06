@@ -8,30 +8,63 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "seed": "node ./database/seed.js",
-    "react-dev": "webpack -d --watch"
+    "seed": "mysql -u root < database/relatedstocks.sql && node ./database/seed.js",
+    "react-dev": "webpack -d --watch",
+    "test": "jest",
+    "test:debug": "jest --debug",
+    "start": "nodemon server/index.js"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/client/src/components/__tests__/setupTests.js",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.js?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   },
   "dependencies": {
     "express": "^4.16.4",
     "faker": "^4.1.0",
+    "jest": "^23.6.0",
+    "ms": "^2.1.1",
     "mysql": "^2.16.0",
     "nodemon": "^1.18.5",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.4",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.0-beta.6",
+    "babel-polyfill": "^6.26.0",
     "components": "^0.1.0",
     "css-loader": "^1.0.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^5.8.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-plugin-import": "^2.14.0",
-    "jest": "^23.6.0",
+    "identity-obj-proxy": "^3.0.0",
+    "regenerator-runtime": "^0.12.1",
+    "style-loader": "^0.23.1",
     "styled": "^1.0.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"

@@ -1,14 +1,13 @@
 import React from 'react';
 import CompanyPage from './CompanyPage.jsx'
+import style from '../styles/carousel.css'
 
 function Carousel(props){
     return(
-        <ul className="carousel-container">
-            <CompanyPage companies={props.companies} moveLeft={props.moveLeft} moveRight={props.moveRight}
-                         center={props.center} left={props.left} right={props.right}/>
-        </ul>
-    ); 
+        <div className={style.carousel}>
+            <CompanyPage companies={props.companies} />
+        </div>
+    );
 }
 
-
-export default Carousel; 
+export default Carousel;
