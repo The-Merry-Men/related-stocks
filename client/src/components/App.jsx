@@ -43,7 +43,7 @@ class CarouselApp extends React.Component {
   componentDidMount() {
     // this.handleGetRequest.bind(this);
     var id = 2; 
-    fetch(`/companies/${id}`)
+    fetch(`/companiesKatie/${id}`)
       .then(res => res.json())
       .then(res => this.setState({
         companies: res
