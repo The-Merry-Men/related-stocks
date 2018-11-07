@@ -2,8 +2,8 @@ import React from 'react';
 import Carousel from './Carousel.jsx';
 import style from '../styles/app.css';
 
-import LeftArrow from '../components/LeftArrow.jsx';
-import RightArrow from '../components/RightArrow.jsx';
+import LeftArrow from './LeftArrow.jsx';
+import RightArrow from './RightArrow.jsx';
 
 class App extends React.Component {
   constructor(props){
@@ -43,7 +43,7 @@ class App extends React.Component {
   componentDidMount() {
     // this.handleGetRequest.bind(this);
     var id = 2; 
-    fetch(`http://localhost:3000/companies/${id}`)
+    fetch(`/companies/${id}`)
       .then(res => res.json())
       .then(res => this.setState({
         companies: res
