@@ -1,6 +1,6 @@
 import React from 'react'; 
 import Carousel from './Carousel.jsx';
-import style from '../styles/app.css';
+import style from '../styles/stockcarousel.css';
 
 import LeftArrow from '../components/LeftArrow.jsx';
 import RightArrow from '../components/RightArrow.jsx';
@@ -57,7 +57,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={style.app}>
+      <div className={style.stockcarousel}>
         <LeftArrow moveLeft={this.moveLeft.bind(this)} />
         <Carousel companies={this.state.companies} count={this.state.count}/>
         <RightArrow moveRight={this.moveRight.bind(this)}/>
