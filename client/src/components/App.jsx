@@ -1,11 +1,11 @@
 import React from 'react'; 
 import Carousel from './Carousel.jsx';
-import style from '../styles/app.css';
+import style from '../styles/carousel_app.css';
 
 import LeftArrow from './LeftArrow.jsx';
 import RightArrow from './RightArrow.jsx';
 
-class App extends React.Component {
+class CarouselApp extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -57,7 +57,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={style.app}>
+      <div className={style.carousel_app}>
         <LeftArrow moveLeft={this.moveLeft.bind(this)} />
         <Carousel companies={this.state.companies} count={this.state.count}/>
         <RightArrow moveRight={this.moveRight.bind(this)}/>
@@ -67,4 +67,4 @@ class App extends React.Component {
 }
 
 
-export default App; 
+export default CarouselApp; 
