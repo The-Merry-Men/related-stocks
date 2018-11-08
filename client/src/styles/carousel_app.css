@@ -23,7 +23,7 @@
 }
 
 .carousel_app {
-    display: grid; 
+    display: flex; 
     overflow-x: hidden; 
     width: 100%; 
 }
