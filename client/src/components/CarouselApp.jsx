@@ -1,7 +1,6 @@
 import React from 'react'; 
 import Carousel from './Carousel.jsx';
 import style from '../styles/carousel_app.css';
-
 import LeftArrow from './LeftArrow.jsx';
 import RightArrow from './RightArrow.jsx';
 
@@ -42,7 +41,7 @@ class CarouselApp extends React.Component {
 
   componentDidMount() {
     var id = 2; 
-    fetch(`/companies/related/${id}`)
+    fetch(`/related/companies/2`)
       .then(res => res.json())
       .then(res => this.setState({
         companies: res
@@ -61,6 +60,5 @@ class CarouselApp extends React.Component {
     )
   }
 }
-
 
 export default CarouselApp; 
