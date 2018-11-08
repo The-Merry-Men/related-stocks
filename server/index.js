@@ -29,8 +29,6 @@ app.get(`/related/companies/:id`, (req, res) => {
   });
 });
 
- 
-
 const port = 3009;
 
 app.listen(port, () => {

@@ -1,7 +1,6 @@
 import React from 'react'; 
 import Carousel from './Carousel.jsx';
 import style from '../styles/carousel_app.css';
-
 import LeftArrow from './LeftArrow.jsx';
 import RightArrow from './RightArrow.jsx';
 
@@ -61,6 +60,5 @@ class CarouselApp extends React.Component {
     )
   }
 }
-
 
 export default CarouselApp; 
