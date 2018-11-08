@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 
 app.use(express.static(`${__dirname}/../client/dist`));
 
-app.get('/companies/related/:id', (req, res) => {
+app.get('/related/companies/:id', (req, res) => {
   var currentID = req.params.id; 
   console.log(currentID);
   connection.query('SELECT id, companyName, currentPrice, percentageApproved, percentageChange ' +
