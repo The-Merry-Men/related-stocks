@@ -16,9 +16,8 @@
 
 .rightArrow {
     visibility: visible;
-    margin-top: 60px;
-    margin-left: 720px;    
-    position: fixed;
+    display: flex; 
+    margin-top: 75px; 
 }
 
 .rightArrow:hover{

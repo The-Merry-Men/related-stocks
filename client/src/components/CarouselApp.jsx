@@ -49,14 +49,20 @@ class CarouselApp extends React.Component {
       .then(() => () => {this.state})
       .catch(err => console.log(err))
   }
-  
+   
   render() {
     return (
       <div className={style.carousel_app}>
-        <LeftArrow moveLeft={this.moveLeft.bind(this)} />
-        <Carousel companies={this.state.companies} count={this.state.count}/>
-        <RightArrow moveRight={this.moveRight.bind(this)}/>
-     </div>
+      <div>
+        <div className={style.title}>People Also Bought</div><br></br>
+        <div className={style.box}>
+          <LeftArrow moveLeft={this.moveLeft.bind(this)} />
+          <Carousel companies={this.state.companies} count={this.state.count}/>
+          <RightArrow moveRight={this.moveRight.bind(this)}/>
+        </div>
+        </div>
+      </div>
+
     )
   }
 }
