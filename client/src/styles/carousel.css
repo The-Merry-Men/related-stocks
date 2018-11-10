@@ -19,7 +19,7 @@
     transform: translateX(0%); 
     transition: .8s;
     width: 695px; 
-    background-color: white; 
+    /* background-color: #1b1b1b; */
     height: 230px; 
     display: flex; 
     flex-direction: row;

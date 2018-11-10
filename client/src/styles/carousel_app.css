@@ -20,10 +20,12 @@
 
 html {
     display: flex;
+    background: #1b1b1d; 
 }
 
 
 .title {
+    color: white; 
     padding-left: 30px; 
     margin-bottom: -5px; 
     display: block;

@@ -15,6 +15,7 @@
 
 
 .rightArrow {
+    color: white; 
     visibility: visible;
     display: flex; 
     margin-top: 75px; 

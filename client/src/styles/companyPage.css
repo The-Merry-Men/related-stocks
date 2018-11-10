@@ -28,15 +28,16 @@
     margin-right: 12px;
     padding: 20px 24px;
     width: 112.5px;
-    border: 1px solid #f4f4f5;
+    border: 1px solid black; 
     text-decoration: inherit;
 }
 
 .stockCard:hover {
-    background: #fafafa; 
+    background: black;
 }
 
 .companyName { 
+    color: white; 
     font-weight: 500; 
     cursor: pointer; 
     letter-spacing: 0.2px;
@@ -48,8 +49,9 @@
 }
 
 .approvalRating {
+    color: white; 
     font-weight: 400; 
-    color: #000;
+    /* color: #000; */
     align-items: center;
     display: flex;
     font-size: 13px;
