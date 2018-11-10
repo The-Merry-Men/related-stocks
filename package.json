@@ -9,10 +9,11 @@
   },
   "scripts": {
     "seed": "mysql -u root < database/relatedstocks.sql && node ./database/seed.js",
+    "docker-seed": "node ./database/seed.js",
     "react-dev": "webpack -d --watch",
     "test": "jest",
     "test:debug": "jest --debug",
-    "start": "nodemon server/index.js"
+    "start": "nodemon server.js"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/client/src/components/__tests__/setupTests.js",
@@ -33,6 +34,7 @@
     }
   },
   "dependencies": {
+    "bluebird": "^3.5.3",
     "express": "^4.16.4",
     "faker": "^4.1.0",
     "jest": "^23.6.0",
