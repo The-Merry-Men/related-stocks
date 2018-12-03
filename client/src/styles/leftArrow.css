@@ -14,8 +14,10 @@
   }
 
 .leftArrow {
-    margin-top: 60px; 
+    color: white; 
+    margin-top: 75px; 
     visibility: hidden;  
+    display: flex; 
 }
 
 .leftArrow:hover{

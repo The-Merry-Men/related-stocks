@@ -12,13 +12,28 @@
     font-weight: 500;
     src: url(https://d2ue93q3u507c2.cloudfront.net/assets/generated_assets/48a3635ce1e76c0122a143b076f51adf.otf) format("opentype");
   }
+  
+.box{
+    display: flex; 
+    padding-left: 5px; 
+}
+
+html {
+    display: flex;
+    background: #1b1b1d; 
+}
+
 
 .title {
+    color: white; 
+    padding-left: 30px; 
+    margin-bottom: -5px; 
     display: block;
     font-size: 26px;
     font-family: "DIN Pro";
     font-style: bold; 
     font-weight: 500; 
+    line-height: 30px; 
     letter-spacing: -0.14px; 
 }
 

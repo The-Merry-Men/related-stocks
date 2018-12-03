@@ -18,9 +18,10 @@
     overflow-x: hidden; 
     transform: translateX(0%); 
     transition: .8s;
-    width: 700px; 
-    background-color: white; 
+    width: 695px; 
+    /* background-color: #1b1b1b; */
     height: 230px; 
     display: flex; 
-    flex-direction: row; 
+    flex-direction: row;
+    padding-left: 7px;  
 }

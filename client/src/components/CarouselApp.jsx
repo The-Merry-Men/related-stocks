@@ -43,20 +43,27 @@ class CarouselApp extends React.Component {
     var id = 2; 
     fetch(`/related/companies/2`)
       .then(res => res.json())
-      .then(res => this.setState({
+      .then(res => {console.log(res); 
+        this.setState({
         companies: res
-      }))
+      })})
       .then(() => () => {this.state})
       .catch(err => console.log(err))
   }
-  
+   
   render() {
     return (
       <div className={style.carousel_app}>
-        <LeftArrow moveLeft={this.moveLeft.bind(this)} />
-        <Carousel companies={this.state.companies} count={this.state.count}/>
-        <RightArrow moveRight={this.moveRight.bind(this)}/>
-     </div>
+      <div>
+        <div className={style.title}>People Also Bought</div><br></br>
+        <div className={style.box}>
+          <LeftArrow moveLeft={this.moveLeft.bind(this)} />
+          <Carousel companies={this.state.companies} count={this.state.count}/>
+          <RightArrow moveRight={this.moveRight.bind(this)}/>
+        </div>
+        </div>
+      </div>
+
     )
   }
 }
